@@ -114,7 +114,6 @@ body h1{
     width: 310px;
     border-radius: 5px;
     font-family: 'Press Start 2P';
-    cursor: pointer;
     transition: .3s;
     margin-top: 20px;
 }
