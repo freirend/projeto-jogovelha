@@ -13,7 +13,9 @@ function cliqueJogador(event){
     let box = event.target;
     let posicao = box.id;
 
-    if(movimentoJogador(posicao) == true){
+    movimentoJogador(posicao)
+
+    if(movimentoJogador() == true){
 
         btnResultado.addEventListener('click', ()=>{
             resultado.style.right = '0'
@@ -32,8 +34,6 @@ function cliqueJogador(event){
     }
 
     atualizaQuadrados()
-
-    console.log(fimJogo)
         
 }
 
@@ -43,7 +43,6 @@ function cliqueJogador(event){
 function atualizaQuadrados(){
 
     let quadrados = document.querySelectorAll('.quadrado');
-    let resultado = document.querySelector('.resultado')
 
     quadrados.forEach((quadrado) => {
 
