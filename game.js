@@ -4,6 +4,7 @@ jogadorUm = prompt('Nome do jogador um:')
 jogadorDois = prompt('Nome do jogador dois:')
 let simbolos = ['o', 'x']
 let fimJogo = false
+let rodada = document.querySelector('.rodada')
 
 function movimentoJogador(position){
 
@@ -21,6 +22,12 @@ function movimentoJogador(position){
                 vezJogador = 1
             }else {
                 vezJogador = 0
+            }
+
+            if (vezJogador == 0){
+                rodada.innerHTML = `<p>É a vez do ${jogadorUm}...</p>`
+            }else{
+                rodada.innerHTML = `<p>É a vez do ${jogadorDois}...</p>`
             }
         }
    }

@@ -16,12 +16,6 @@ function cliqueJogador(event){
     let box = event.target;
     let posicao = box.id;
 
-    if (vezJogador == 0){
-        rodada.innerHTML = `<p>É a vez do ${jogadorDois}...</p>`
-    }else{
-        rodada.innerHTML = `<p>É a vez do ${jogadorUm}...</p>`
-    }
-
     movimentoJogador(posicao)
 
     if(movimentoJogador() == true){
