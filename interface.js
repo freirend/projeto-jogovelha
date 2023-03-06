@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 let resultado = document.querySelector('.resultado')
 let btnResultado = document.querySelector('.btn-resultado')
+let rodada = document.querySelector('.rodada')
 let quadrados = document.querySelectorAll('.quadrado');
 
 quadrados.forEach((quadrado) => {
@@ -13,10 +14,16 @@ function cliqueJogador(event){
     let box = event.target;
     let posicao = box.id;
 
+    if (vezJogador == 0){
+        rodada.innerHTML = `<p>É a vez do ${jogadorUm}...</p>`
+    }else{
+        rodada.innerHTML = `<p>É a vez do ${jogadorDois}...</p>`
+    }
+
     movimentoJogador(posicao)
 
     if(movimentoJogador() == true){
-
+        btnResultado.style.fontSize = '1.2em'
         btnResultado.addEventListener('click', ()=>{
             resultado.style.right = '0'
             if (vezJogador == 0){
@@ -53,4 +60,6 @@ function atualizaQuadrados(){
             quadrado.innerHTML = `<div class='${simbolo}'><div/>`
         }
     }
+
 )}
+
