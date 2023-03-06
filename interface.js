@@ -30,6 +30,7 @@ function cliqueJogador(event){
         })
 
     }else if (tab[0] && tab[1] && tab[2] && tab[3] && tab[4] && tab[5] && tab[6] && tab[7] && tab[8] != ''){
+        btnResultado.style.fontSize = '1.2em'
         btnResultado.addEventListener('click', ()=>{
         resultado.style.right = '0'
         resultado.innerHTML = `<p>O jogo terminou empatado</p>`
