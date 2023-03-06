@@ -116,4 +116,5 @@ body h1{
     font-family: 'Press Start 2P';
     transition: .3s;
     margin-top: 20px;
+    line-height: 25px;
 }
